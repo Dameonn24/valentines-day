@@ -85,6 +85,7 @@ button {
 
 /* Media Queries for Mobile Devices */
 @media (max-width: 600px) {
+
     h1 {
         font-size: 2em; /* Smaller font size for mobile */
     }
@@ -101,5 +102,6 @@ button {
 
     .container {
         padding: 15px;
+        margin-bottom: 250px; /* Add space at the bottom for the confetti */
     }
 }
