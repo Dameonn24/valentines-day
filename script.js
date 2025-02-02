@@ -35,8 +35,19 @@ noButton.addEventListener('mousemove', (e) => {
             const newX = Math.random() * (window.innerWidth - noButton.offsetWidth);
             const newY = Math.random() * (window.innerHeight - noButton.offsetHeight);
             noButton.style.position = 'absolute';
-            noButton.style.left = `${newX}px`;
-            noButton.style.top = `${newY}px`;
+            noButton.style.left = `${Math.max(10, Math.min(newX, window.innerWidth - noButton.offsetWidth - 10))}px`;
+            noButton.style.top = `${Math.max(10, Math.min(newY, window.innerHeight - noButton.offsetHeight - 10))}px`;
         }
+    }
+});
+
+// Add touch event for mobile devices
+noButton.addEventListener('touchstart', (e) => {
+    if (noCount >= 1) {
+        const newX = Math.random() * (window.innerWidth - noButton.offsetWidth);
+        const newY = Math.random() * (window.innerHeight - noButton.offsetHeight);
+        noButton.style.position = 'absolute';
+        noButton.style.left = `${Math.max(10, Math.min(newX, window.innerWidth - noButton.offsetWidth - 10))}px`;
+        noButton.style.top = `${Math.max(10, Math.min(newY, window.innerHeight - noButton.offsetHeight - 10))}px`;
     }
 });
