@@ -13,8 +13,9 @@ yesButton.addEventListener('click', () => {
 noButton.addEventListener('click', () => {
     noCount++;
     if (noCount === 1) {
-        mainText.textContent = 'Are you sure?';
+        mainText.textContent = 'You really don\'t want to be my Valentine?';
         mainImage.src = 'cat 2.gif'; // Replace with a different picture
+        yesButton.textContent = 'I was just kidding';
     }
 });
 
